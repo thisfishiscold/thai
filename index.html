@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thaiväg — lär dig prata thailändska</title>
+<meta name="description" content="Verifierat ordförråd, grammatik och uttalsträning i thailändska. Byggt för svenskar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#" onclick="go('start');return false">
+      <span class="brand-th">ทาง</span><span>Thaiväg</span>
+    </a>
+    <div class="nav-links">
+      <button class="nav-link on" data-v="start" onclick="go('start')">Start</button>
+      <button class="nav-link" data-v="ord" onclick="go('ord')">Ordförråd</button>
+      <button class="nav-link" data-v="dlg" onclick="go('dlg')">Fraser</button>
+      <button class="nav-link" data-v="gram" onclick="go('gram')">Grammatik</button>
+      <button class="nav-link" data-v="tran" onclick="go('tran')">Träna</button>
+      <button class="nav-link" data-v="utt" onclick="go('utt')">Uttal</button>
+    </div>
+  </div>
+</nav>
+
+<!-- START -->
+<section class="view on" id="v-start">
+  <div class="wrap hero">
+    <div class="eyebrow">Thailändska för svenskar</div>
+    <h1>Språket sitter inte i bokstäverna. Det sitter i <em>linjen</em>.</h1>
+    <p class="hero-lead">
+      Samma tre bokstäver betyder <b>komma</b>, <b>hund</b> eller <b>häst</b> — bara tonen skiljer dem åt.
+      Därför ritas tonen här som en linje under varje stavelse, i stället för ett litet tecken du kisar på.
+      Tryck och lyssna.
+    </p>
+    <div class="tonedemo" id="tonedemo"></div>
+    <div class="stats" id="stats"></div>
+  </div>
+</section>
+
+<!-- ORDFÖRRÅD -->
+<section class="view" id="v-ord">
+  <div class="wrap">
+    <div id="ord-list">
+      <h2 class="h2">Ordförråd</h2>
+      <p class="sub">Verifierat mot källan, med uttalet omskrivet så att en svensk läsning ger rätt ljud. Tryck på en kategori.</p>
+      <div class="cats" id="cats"></div>
+    </div>
+    <div id="ord-detail" style="display:none"></div>
+  </div>
+</section>
+
+<!-- FRASER & DIALOGER -->
+<section class="view" id="v-dlg">
+  <div class="wrap">
+    <div id="dlg-list">
+      <h2 class="h2">Fraser & dialoger</h2>
+      <p class="sub">Körklara repliker för verkliga situationer — rättade till pǒm och vårt uttalssystem. Tryck på en scen, tryck på ▶ för att höra frasen.</p>
+      <div class="cats" id="dlg-cats"></div>
+    </div>
+    <div id="dlg-detail" style="display:none"></div>
+  </div>
+</section>
+
+<!-- GRAMMATIK -->
+<section class="view" id="v-gram">
+  <div class="wrap">
+    <h2 class="h2">Grammatik</h2>
+    <p class="sub">Tolv moduler. Thailändskan böjer ingenting — det mesta av "grammatiken" handlar om var småorden hamnar. Börja uppifrån.</p>
+    <div class="gram" id="gram"></div>
+  </div>
+</section>
+
+<!-- TRÄNA -->
+<section class="view" id="v-tran">
+  <div class="wrap" id="tran"></div>
+</section>
+
+<!-- UTTAL -->
+<section class="view" id="v-utt">
+  <div class="wrap" id="utt"></div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <b>Thaiväg</b> — ordförrådet är verifierat mot källdokumentet, med rättelser och tillägg markerade. ★ = tillägg utöver källan.<br>
+    Uppläsningen använder enhetens egen talsyntes. Framsteg sparas lokalt i din webbläsare.
+  </div>
+</footer>
+
+<script src="vocab.js"></script>
+<script src="dialogs.js"></script>
+<script src="grammar.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
